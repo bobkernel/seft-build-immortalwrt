@@ -19,4 +19,9 @@
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
+# 1. 移除可能导致冲突的旧版 Rust 源码（如果存在）
 rm -rf feeds/packages/lang/rust
+
+# 2. 核心：下载预编译好的 Rust 环境 (由 sbwml 提供，专门针对 OpenWrt 编译优化)
+# 这一步能节省约 1 小时的编译时间和 15GB 的空间
+curl -fsSL https://raw.githubusercontent.com/sbwml/openwrt_pkgs/main/setup_rust.sh | bash
