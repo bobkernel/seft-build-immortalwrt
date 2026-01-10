@@ -22,4 +22,4 @@ sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwa
 sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main' feeds.conf.default
 
 # 添加 MosDNS 插件源
-sed -i '$a src-git mosdns https://github.com/Iinease/openwrt-mosdns.git;master' feeds.conf.default
+sed -i '$a src-git mosdns https://github.com/sbwml/luci-app-mosdns.git;v5' feeds.conf.default
