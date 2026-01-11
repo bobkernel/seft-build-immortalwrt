@@ -20,7 +20,7 @@
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 # 1. 移除可能导致冲突的旧版 Rust 源码（如果存在）
-rm -rf feeds/packages/lang/rust
+#rm -rf feeds/packages/lang/rust
 
 # 修改 package/feeds/packages/rust 的编译逻辑，强制其寻找外部 rustc
 sed -i 's/BUILD_DEPENDS:=rust\/host/BUILD_DEPENDS:=/g' feeds/packages/lang/rust/Makefile 2>/dev/null || true
